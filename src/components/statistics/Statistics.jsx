@@ -1,25 +1,20 @@
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
+import css from './Statistics.module.css';
 
 function Statistics(props) {
-    const {
-      title,
-        stats: {
-            label,
-            percentage
-        },
-    } = props;
+    const { label, percentage, bgColor } = props;
     return (
-      <section className="statistics">
-        <h2 className="title">{title}</h2>
-
-        <ul className="stat-list">
-          <li className="item">
-            <span className="label">{label}</span>
-            <span className="percentage">{percentage}</span>
-          </li>
-        </ul>
-      </section>
+      <li className={css.item} style={{ backgroundColor: `${bgColor}` }}>
+        <span className={css.label}>{label}</span>
+        <span className="percentage">{percentage}%</span>
+      </li>
     );
 }
+
+Statistics.propTypes = {
+  label: PropTypes.string.isRequired,
+  percentage: PropTypes.number.isRequired,
+  bgColor: PropTypes.string.isRequired,
+};
 
 export default Statistics;

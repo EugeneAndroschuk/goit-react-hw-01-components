@@ -1,0 +1,13 @@
+.raw {
+    font-size: 16px;
+    text-align: center;
+}
+
+.raw:nth-child(even) {
+border: 1px solid rgb(230, 229, 229);
+background-color:rgb(189, 224, 255);
+}
+
+.cell {
+    padding: 8px 0;
+}

@@ -1,28 +1,28 @@
 import PropTypes from 'prop-types';
-import './Profile.css';
+import css from './Profile.module.css';
 
 function Profile(props) {
   const { avatar, username, tag, location, followers, views, likes } = props;
   return (
-    <div className="profile">
+    <div className={css.profile}>
       <div className="description">
-        <img src={avatar} alt="User avatar" class="avatar" />
-        <p className="name">{username}</p>
-        <p className="tag">@{tag}</p>
-        <p className="location">{location}</p>
+        <img src={avatar} alt="User avatar" className={css.avatar} />
+        <p className={css.name}>{username}</p>
+        <p className={css.tag}>@{tag}</p>
+        <p className={css.location}>{location}</p>
       </div>
-      <ul className="stats">
-        <li className="stats-item">
+      <ul className={css.stats}>
+        <li className={css['stats-item']}>
           <span className="label">Followers</span>
-          <span className="quantity">{followers}</span>
+          <span className={css.quantity}>{followers}</span>
         </li>
-        <li className="stats-item">
+        <li className={css['stats-item']}>
           <span className="label">Views</span>
-          <span className="quantity">{views}</span>
+          <span className={css.quantity}>{views}</span>
         </li>
-        <li className="stats-item">
+        <li className={css['stats-item']}>
           <span className="label">Likes</span>
-          <span className="quantity">{likes}</span>
+          <span className={css.quantity}>{likes}</span>
         </li>
       </ul>
     </div>
@@ -30,13 +30,13 @@ function Profile(props) {
 }
 
 Profile.propTypes = {
-  avatar: PropTypes.string,
-  username: PropTypes.string,
-  tag: PropTypes.string,
-  location: PropTypes.string,
-  followers: PropTypes.number,
-  views: PropTypes.number,
-  likes: PropTypes.number,
+  avatar: PropTypes.string.isRequired,
+  username: PropTypes.string.isRequired,
+  tag: PropTypes.string.isRequired,
+  location: PropTypes.string.isRequired,
+  followers: PropTypes.number.isRequired,
+  views: PropTypes.number.isRequired,
+  likes: PropTypes.number.isRequired,
 };
 
 export default Profile;
