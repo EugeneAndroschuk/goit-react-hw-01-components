@@ -4,7 +4,7 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
 }
 
-.cell {
+.cell-head {
   padding: 8px 0;
   width: 250px;
   font-size: 18px;
@@ -15,6 +15,20 @@
   background-color: rgb(0, 119, 255);
 }
 
-.cell:nth-child(even) {
+.cell-head:nth-child(even) {
   border: 1px solid rgb(189, 224, 255);
+}
+
+.raw {
+    font-size: 16px;
+    text-align: center;
+}
+
+.raw:nth-child(even) {
+border: 1px solid rgb(230, 229, 229);
+background-color:rgb(189, 224, 255);
+}
+
+.cell {
+    padding: 8px 0;
 }

@@ -4,8 +4,8 @@ import css from './FriendListItem.module.css';
 function FriendListItem(props) {
   const { status, avatar, name } = props;
     return (
-      <li className={css.item}>
-        {status ? (
+      <>
+        { status ? (
           <span
             className={css.status}
             style={{ backgroundColor: 'green' }}
@@ -18,7 +18,7 @@ function FriendListItem(props) {
         )}
         <img className="avatar" src={avatar} alt="User avatar" width="48" />
         <p className={css.name}>{name}</p>
-      </li>
+     </>
     );
 }
 
