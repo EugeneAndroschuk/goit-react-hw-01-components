@@ -6,10 +6,10 @@ import transactions from '../data/transactions.json';
 // import Statistics from './Statistics/Statistics';
 // import FriendList from './FriendList/FriendList';
 // import TransactionHistory from './TransactionHistory/TransactionHistory';
-import Profile from 'components/profile/Profile';
-import Statistics from 'components/Statistics/Statistics';
-import FriendList from 'components/FriendList/FriendList';
-import TransactionHistory from 'components/TransactionHistory/TransactionHistory';
+import Profile from './profile/Profile';
+import Statistics from './statistics/Statistics';
+import FriendList from './friendList/FriendList';
+import TransactionHistory from './transactionHistory/TransactionHistory';
 
 export const App = () => {
   return (
